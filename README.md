@@ -58,5 +58,3 @@ Wazuh SIEM
 Windows Event Logs
 Kali Linux
 Windows
-- Kali Linux
-- Windows 10
