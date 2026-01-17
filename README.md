@@ -5,6 +5,13 @@ Investigate an RDP brute-force attack & confirm system compromise by correlating
 Windows authentication logs & file integrity monitoring alerts using Wazuh SIEM.
 
 
+# Incident Response Report
+A detailed SOC-style incident response report documenting detection,
+analysis, MITRE ATT&CK mapping, timeline, and response actions:
+
+Incident Report RDP BruteForce Wazuh.pdf
+
+
 # Lab Setup
 Wazuh Manager, Indexer & Dashboard: Kali Linux
 Victim Machine: Windows 10 (Wazuh Agent Installed)
