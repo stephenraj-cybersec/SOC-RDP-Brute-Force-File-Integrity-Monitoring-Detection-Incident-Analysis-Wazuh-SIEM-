@@ -1,0 +1,24 @@
+Detection Queries :
+1)Failed Login Detection
+index=* EventCode=4625
+Purpose: Detect failed authentication attempts indicating possible brute force activity.
+
+2)Successful RDP Login Detection
+index=* EventCode=4624 Logon_Type=3
+Purpose: Detect successful logins.
+
+3)Encoded PowerShell Detection
+index=*  "*-enc*"
+Purpose: Detect Base64-encoded PowerShell execution, often used to evade detection.
+
+4)PowerShell Download Cradle Detection
+index=* "DownloadString" "IEX"
+Purpose: Detect PowerShell download cradle activity used to retrieve remote payloads.
+
+5)PowerShell Logs 
+index=* EventCode=4104
+Purpose: Detect all PowerShell Logs.
+
+6)Logout Logs
+index=* EventCode=4634 
+Purpose: Detect Log Out
