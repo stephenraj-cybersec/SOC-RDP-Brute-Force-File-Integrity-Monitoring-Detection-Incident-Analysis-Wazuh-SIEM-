@@ -1,1 +1,29 @@
+Alerts 
 
+1) Identify Multiple Beute Force from a Specific Source IP
+
+Query Used: 
+index=* EventCode=4625 | stats count by Source_Network_Address Account_Name host | where count >=6 | sort = count
+
+Result:
+Multiple authentication attempts observed from the attacker's IP.
+
+
+
+2)Identify PowerShell Encoded Command 
+
+Query Used: 
+index=* EventCode=4104 ("EncodedCommand" OR "-enc" OR "FromBase64String")
+
+Result:
+Show all encoded & Base64String Commands used in PowerShell 
+
+
+
+3)Identify PowerShell Download Cardle Attack  
+
+Query Used: 
+index=* EventCode=4104 ("DownloadString" OR "Invoke-WebRequest" OR "Net.WebClient" OR "IEX")
+
+Result:
+Show all PowerShell Download Cardle Logs 
